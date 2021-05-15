@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --left-bg-color: rgba(87, 84, 236, 0.7);
+  --rigth-bg-color: rgba(43, 43, 43, 0.8);
+  --left-btn-hover-color: rgba(87, 84, 236, 1);
+  --right-btn-hover-color: rgba(28, 122, 28, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+.btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  border-radius: 0.2rem;
+  text-decoration: none;
+  color: #fff;
+  border: #fff solid 0.2rem;
+  font-size: 0.8rem;
+  width: 12rem;
+  padding: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: transparent;
+
+  /* border-color: var(--left-btn-hover-color);
+  background-color: var(--left-btn-hover-color); */
+  cursor: pointer;
+}
+
+.split {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.split.left {
+  position: absolute;
+  width: 50%;
+  left: 0;
+  background: url('ps.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.split.left::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--left-bg-color);
+}
+
+.split.left .btn:hover {
+  background-color: var(--left-btn-hover-color);
+  border-color: var(--left-btn-hover-color);
+}
+
+.split.right {
+  position: absolute;
+  width: 50%;
+  right: 0;
+  background: url('xbox.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.split.right::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--rigth-bg-color);
+}
+
+.split.right .btn:hover {
+  background-color: var(--right-btn-hover-color);
+  border-color: var(--right-btn-hover-color);
+}
+
+.split.left,
+.split.right {
+  transition: 0.5s ease;
+}
+
+.hover-left .left {
+  width: 70%;
+}
+
+.hover-left .right {
+  width: 30%;
+}
+
+.hover-right .right {
+  width: 70%;
+}
+
+.hover-right .left {
+  width: 30%;
+}
