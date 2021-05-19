@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: blueviolet;
+  font-family: 'Muli', sans-serif;
+}
+
+.faq-container {
+  max-width: 600px;
+  margin: 0px auto;
+}
+
+.faq-box {
+  background-color: white;
+  padding: 2rem 1rem;
+  margin: 40px;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 1), 0 3px 6px rgba(0, 0, 0, 1);
+}
+
+.faq-box .faq-answer {
+  display: none;
+}
+
+.faq-box.active .faq-answer {
+  display: block;
+}
+
+.faq-box.active {
+  background-color: white;
+  padding: 2rem 1rem;
+  margin: 40px;
+  border-radius: 4px;
+  position: relative;
+}
+.faq-box.active::before,
+.faq-box.active::after {
+  content: '\f075';
+  font-family: 'Font Awesome 5 Free';
+  color: #2ecc71;
+  font-size: 7rem;
+  opacity: 0.2;
+  z-index: 0;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.faq-box.active::after {
+  transform: rotateY(-180deg);
+  position: absolute;
+  top: -20px;
+  left: -20px;
+}
+.btn {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+}
+
+.faq-box.active .btn .fas.fa-chevron-down {
+  display: none;
+}
+
+.faq-box.active .btn .fas.fa-times {
+  display: block;
+}
+
+.faq-box .btn .fas.fa-times {
+  display: none;
+}
+
+.faq-box .btn .fasfa-chevron-down {
+  display: block;
+}
