@@ -24,8 +24,7 @@ leftBtn.addEventListener('click', ()=>{
 
 
 rightBtn.addEventListener('click', ()=>{
-
-    console.log('changed ', activeSlide )
+    slides[activeSlide].classList.remove('active')
     if(activeSlide===slides.length-1)activeSlide = 0;
     else activeSlide++
     slides[activeSlide].classList.add('active')
