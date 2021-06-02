@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: steelblue;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  margin: 0;
+
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.empty {
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fill {
+  background-image: url('https://source.unsplash.com/random/150x150');
+  height: 145px;
+  width: 145px;
+  cursor: pointer;
+  background-position: center;
+}
+.hold {
+  border: solid 5px #ccc;
+}
+
+.hovered {
+  background-color: #333;
+  border: 3px dashed white;
+}
+
+@media (max-width: 800px) {
+  body {
+    flex-direction: column;
+  }
+}
